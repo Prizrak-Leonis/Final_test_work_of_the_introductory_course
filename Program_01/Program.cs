@@ -3,31 +3,32 @@
 // ["1234", "1567", "-2", "computer science"] → ["-2"]
 // ["Russia", "Denmark", "Kazan"] → []
 
-void Print_massive(string[] massive)
+void PrintMassive(string[] massive)
 {
-    Console.Write("[ "+ string.Join(", ", massive) + " ]");
+    Console.Write("[" + string.Join(", ", massive) + "]");
     Console.WriteLine();
 }
 
-string[] first_massive = { "Hello", "2", "world", ":-)" };
+string[] firstMassive = { "Hello", "2", "world", ":-)" };
+int limitLength = 3;
 int count = 0;
-for (int i = 0; i < first_massive.Length; i++)
+for (int i = 0; i < firstMassive.Length; i++)
 {
-    if (first_massive[i].Length <= 3)
+    if (firstMassive[i].Length <= limitLength)
         count++;
 }
-string[] end_massive = new string[count];
+string[] endMassive = new string[count];
 int j = 0;
 int k = 0;
-while (j < end_massive.Length)
+while (j < endMassive.Length)
 {
-    if (first_massive[k].Length <= 3)
+    if (firstMassive[k].Length <= limitLength)
     {
-        end_massive[j] = first_massive[k];
+        endMassive[j] = firstMassive[k];
         j++;
     }
     k++;
 }
 
-Print_massive(first_massive);
-Print_massive(end_massive);
+PrintMassive(firstMassive);
+PrintMassive(endMassive);

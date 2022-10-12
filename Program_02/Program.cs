@@ -17,14 +17,14 @@ for (int i = 0; i < firstMassive.Length; i++)
     Console.Write($"Введите значение в {i + 1}й строке массива: ");
     firstMassive[i] = Console.ReadLine();
 }
-
+int limitLength = 3;
 string[] SelectionMassive(string[] massive)
 {
     int count = 0;
     string[] newMassive = new string[massive.Length];
     foreach (string item in massive)
     {
-        if (item.Length <= 3)
+        if (item.Length <= limitLength)
         {
             newMassive[count] = item;
             count++;
